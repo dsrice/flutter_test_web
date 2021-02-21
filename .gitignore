@@ -1,3 +1,7 @@
 .idea/.gitignore
 .idea/
 flutter_demo_app/__pycache__/
+core/__pycache__/
+v1/__pycache__/
+v1/migrations/__pycache__/
+v1/models/__pycache__/
