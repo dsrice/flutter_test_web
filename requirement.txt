@@ -3,3 +3,5 @@ psycopg2
 djangorestframework
 django-filter
 djangorestframework-jwt
+django-log-request-id
+django-environ
