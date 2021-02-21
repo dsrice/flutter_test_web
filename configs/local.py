@@ -7,7 +7,14 @@ import environ
 env = environ.Env()
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7n96yl547c^50wi2(t3!j+5j+1k1*aqrdh6*ph$(zwztri@+b%'
+SECRET_KEY = env("SECRET_KEY")
+
+# JWT
+JWT_AUTH = {
+    "JWT_EXPIRATION_DELTA": datetime.timedelta(minutes=5),
+    "JWT_AUTH_COOKIE": "token",
+    "JWT_SECRET_KEY": env("JWT_KEY")
+}
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
