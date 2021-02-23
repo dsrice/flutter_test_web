@@ -6,3 +6,4 @@ v1/__pycache__/
 v1/migrations/__pycache__/
 v1/models/__pycache__/
 configs/__pycache__/
+__pycache__/manage.cpython-37.pyc
