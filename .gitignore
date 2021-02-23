@@ -7,3 +7,5 @@ v1/migrations/__pycache__/
 v1/models/__pycache__/
 configs/__pycache__/
 __pycache__/manage.cpython-37.pyc
+bell_web/__pycache__/
+bell_web/views/__pycache__/
