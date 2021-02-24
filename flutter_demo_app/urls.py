@@ -18,5 +18,4 @@ from django.conf.urls import url, include
 urlpatterns = [
     url("v1/", include("v1.urls")),
     url("bell_app/", include("bell_web_test.urls")),
-    url("bell_tail/", include("bell_tail.urls"))
 ]

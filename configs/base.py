@@ -25,8 +25,6 @@ ALLOWED_HOSTS = ["10.0.2.2", "localhost"]
 
 AUTH_USER_MODEL = 'v1.User'
 
-TAILWIND_APP_NAME = 'bell_tail'
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,8 +37,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'core',
     'v1',
-    'tailwind',
-    'bell_tail'
+    'materialize',
+    'bell_web_test',
 ]
 
 MIDDLEWARE = [
