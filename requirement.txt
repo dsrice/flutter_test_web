@@ -6,3 +6,4 @@ djangorestframework-jwt
 django-log-request-id
 django-environ
 django-summernote
+django-tailwind

@@ -25,6 +25,7 @@ ALLOWED_HOSTS = ["10.0.2.2", "localhost"]
 
 AUTH_USER_MODEL = 'v1.User'
 
+TAILWIND_APP_NAME = 'bell_tail'
 
 # Application definition
 
@@ -38,6 +39,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'core',
     'v1',
+    'tailwind',
+    'bell_tail'
 ]
 
 MIDDLEWARE = [
@@ -56,7 +59,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, "bell_web/templates")
+            os.path.join(BASE_DIR, "bell_web_test/templates"),
+            os.path.join(BASE_DIR, "bell_tail/templates")
         ],
         'APP_DIRS': True,
         'OPTIONS': {
