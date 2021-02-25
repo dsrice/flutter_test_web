@@ -12,3 +12,4 @@ bell_web_test/views/__pycache__/
 bell_tail/__pycache__/
 bell_tail/views/__pycache__/
 bell_web_test/migrations/__pycache__/
+bell_web_test/forms/login/__pycache__/

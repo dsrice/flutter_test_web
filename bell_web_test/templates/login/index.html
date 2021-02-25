@@ -3,17 +3,19 @@
 {% block content %}
     <link rel="stylesheet" href="{% sass_src  'bell_web_test/login.sass' %}">
 
+<form action="" method="post">
+  {% csrf_token %}
   <div class="row">
     <div class="col l6 s12 offset-l3">
         <div class="p-login_loginArea">
           <div class="card">
             <div class="card-content">
                 <div class="input-field">
-                  <input placeholder="ログインIDを入力してください" id="loginid" type="text" class="validate">
+                  <input placeholder="ログインIDを入力してください" id="id_loginid" name="loginid" type="text" class="validate">
                   <label for="loginid"><i class="material-icons left">accessibility</i>ログインID</label>
                 </div>
                 <div class="input-field">
-                  <input placeholder="パスワードを入力してください" id="password" type="text" class="validate">
+                  <input placeholder="パスワードを入力してください" id="id_password" name="password" type="text" class="validate">
                   <label for="password"><i class="material-icons left">vpn_key</i>パスワード</label>
                 </div>
 
@@ -28,6 +30,6 @@
         </div>
     </div>
   </div>
-
+</form>
 
 {% endblock %}
