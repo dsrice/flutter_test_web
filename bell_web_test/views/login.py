@@ -11,8 +11,8 @@ def index(request):
     """
     form = LoginForm(request.POST or None)
     if form.is_valid():
-        loginid = form.data["loginid"]
-        user = authenticate(loginid=loginid, password=form.data["password"])
+        loginid = form.data.loginid
+        user = authenticate(loginid=loginid, password=form.data.password)
         if user:
             login(request, user)
 
