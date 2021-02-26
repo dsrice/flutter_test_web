@@ -1,7 +1,9 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.http import HttpResponse
 
 
+@login_required
 def index(request):
     """
     記事一覧画面
@@ -11,13 +13,4 @@ def index(request):
 
     return render(request, "article/index.html")
 
-
-def new(request):
-    """
-    記事作成画面
-    :param request:
-    :return:
-    """
-
-    return render(request, "article/index.html")
 

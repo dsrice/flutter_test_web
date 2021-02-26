@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'core',
     'v1',
     'materialize',
-    'bell_web_test',
+    'bell_app',
     'sass_processor',
 ]
 
@@ -58,7 +58,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, "bell_web_test/templates"),
+            os.path.join(BASE_DIR, "bell_app/templates"),
             os.path.join(BASE_DIR, "bell_tail/templates")
         ],
         'APP_DIRS': True,

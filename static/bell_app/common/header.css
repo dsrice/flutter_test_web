@@ -1,0 +1,17 @@
+.m-headerArea { padding-left: 8px; padding-right: 8px; }
+
+main { padding-left: 300px; }
+
+main .container { width: 100%; }
+
+.m-sideMenu_demoArea { font-size: 30px; text-align: center; text-shadow: 2px 2px 3px bisque; }
+
+.m-sideMenu_menuArea { font-size: 20px; padding-left: 16px; }
+
+.m-sideMenu_menuArea a { text-decoration: none; color: black; }
+
+.m-sideMenu_menuArea a:hover { text-decoration: none; color: black; }
+
+.m-sideMenu_menuArea .material-icons { font-size: 20px; }
+
+/*# sourceMappingURL=header.css.map */
