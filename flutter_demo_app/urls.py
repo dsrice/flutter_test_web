@@ -14,8 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
+from django.urls import path
 
 urlpatterns = [
     url("v1/", include("v1.urls")),
     url("bell_app/", include("bell_app.urls")),
+    path('summernote/', include('django_summernote.urls')),
 ]

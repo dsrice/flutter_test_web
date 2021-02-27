@@ -1,7 +1,7 @@
 from django import forms
 
 
-class CommonForm(forms.ModelForm):
+class CommonForm(forms.Form):
     """
     共通フォーム
     """

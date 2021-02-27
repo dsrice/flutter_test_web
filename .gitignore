@@ -13,3 +13,5 @@ bell_tail/__pycache__/
 bell_tail/views/__pycache__/
 bell_app/migrations/__pycache__/
 bell_app/forms/login/__pycache__/
+bell_app/forms/__pycache__/
+bell_app/forms/article/__pycache__/
