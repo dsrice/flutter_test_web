@@ -15,3 +15,5 @@ bell_app/migrations/__pycache__/
 bell_app/forms/login/__pycache__/
 bell_app/forms/__pycache__/
 bell_app/forms/article/__pycache__/
+v1/sirializers/__pycache__/
+v1/views/__pycache__/

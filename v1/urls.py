@@ -3,11 +3,14 @@ from django.urls import  path
 from rest_framework import routers
 from rest_framework_jwt.views import obtain_jwt_token, verify_jwt_token, refresh_jwt_token
 
+from v1.views.article import ArticleView
+
 router = routers.SimpleRouter()
 urlpatterns = [
     path("auth/token", obtain_jwt_token),
     path("auth/token/verify", verify_jwt_token),
     path('auth/token/refresh', refresh_jwt_token),
+    path('article', ArticleView.as_view()),
 ]
 
 urlpatterns += router.urls
