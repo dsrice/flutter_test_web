@@ -2,6 +2,13 @@
 {% load sass_tags %}
 {% block content %}
 
-article
+<div class="row">
+    <div class="col s12">
+        <a class="waves-effect waves-light btn right" href="{% url 'bell_app:article_new'%} >
+            <i class="material-icons left">create</i>新規作成
+        </a>
+    </div>
+</div>
+
 
 {% endblock %}

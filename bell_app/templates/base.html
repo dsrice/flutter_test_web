@@ -23,22 +23,30 @@
                 </div>
             </li>
             <li>
-                <div class="m-sideMenu_menuArea">
-                    <a>
+                <a>
+                    <div class="m-sideMenu_menuArea">
                         <i class="material-icons ">mode_edit</i>記事管理
-                    </a>
-                </div>
+                    </div>
+                </a>
             </li>
             <li>
-                <div class="m-sideMenu_menuArea">
-                    <a>
+                <a>
+                    <div class="m-sideMenu_menuArea">
                         <i class="material-icons ">local_parking</i>スタンプ管理
-                    </a>
-                </div>
+                    </div>
+                </a>
             </li>
         </ul>
     </header>
     <main>
+        <nav class="m-header_headerArea">
+          <div class="nav-wrapper white black-text">
+                <span class="m-header_titleArea">{{ form.title }}</span>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                  <li><a class="black-text" href="collapsible.html">ログアウト</a></li>
+                </ul>
+          </div>
+        </nav>
         <div class="container bsa">
           {% block content %}
           {{ content }}
