@@ -7,4 +7,5 @@ urlpatterns = [
     path("article/", article.index, name="article_index"),
     path("article/new", article.new, name="article_new"),
     path("article/create", article.create, name="article_create"),
+    path("article/<int:article_id>/edit", article.edit, name="article_edit"),
 ]

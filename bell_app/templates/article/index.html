@@ -6,7 +6,7 @@
 <div class="row">
     <div class="col s12">
         <a class="waves-effect waves-light btn right" href="{% url 'bell_app:article_new'%}" >
-            <i class="material-icons left">create</i>新規作成
+            新規作成
         </a>
     </div>
     <div class="col s12">
@@ -24,7 +24,7 @@
                         <td>{{ article.id }}</td>
                         <td>{{ article.title }}</td>
                         <td>
-                            <a class="waves-effect waves-light btn-flat " href="{% url 'bell_app:article_new'%}" >
+                            <a class="waves-effect waves-light btn-flat " href="{% url 'bell_app:article_edit' article_id=article.id %}" >
                                 <i class="material-icons left">create</i>
                             </a>
                         </td>
