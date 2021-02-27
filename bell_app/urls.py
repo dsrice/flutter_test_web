@@ -6,4 +6,5 @@ urlpatterns = [
     path("login/", login.index, name="login"),
     path("article/", article.index, name="article_index"),
     path("article/new", article.new, name="article_new"),
+    path("article/create", article.create, name="article_create"),
 ]

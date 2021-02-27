@@ -10,6 +10,7 @@ class ArticleIndexForm(CommonForm):
     記事一覧画面用Form
     """
     article_title = forms.CharField()
+    articles = Article.objects.all()
 
     def __init__(self, text):
         self.title = text
