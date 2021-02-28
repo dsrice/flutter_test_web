@@ -13,7 +13,7 @@ def index(request):
     :param request
     :return:
     """
-    form = ArticleIndexForm("記事一覧")
+    form = ArticleIndexForm()
 
     context = {"title": "記事一覧", "form": form}
     return render(request, "article/index.html", context)

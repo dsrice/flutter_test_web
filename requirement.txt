@@ -10,3 +10,4 @@ django-materialize
 libsass
 django-compressor
 django-sass-processor
+mysqlclient

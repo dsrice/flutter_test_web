@@ -12,9 +12,6 @@ class ArticleIndexForm(CommonForm):
     article_title = forms.CharField()
     articles = Article.objects.all().order_by("-id")
 
-    def __init__(self, text):
-        self.title = text
-
 
 class ArticleNewForm(forms.Form):
     """

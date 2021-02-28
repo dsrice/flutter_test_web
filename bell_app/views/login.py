@@ -9,6 +9,7 @@ def index(request):
     :param request:
     :return:
     """
+    print("login")
     form = LoginForm(request.POST or None)
     if form.is_valid():
         loginid = form.data["loginid"]
