@@ -10,4 +10,5 @@ RUN mkdir /app/web
 RUN mkdir /app/web/current
 WORKDIR /app/web/current
 
+
 EXPOSE 8000

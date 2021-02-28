@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "article.css",
+	"sources": [
+		"article.sass",
+		"common/_const.sass"
+	],
+	"names": [],
+	"mappings": "AAEA,AACE,KADG,AAAA,QAAQ,CACX,EAAE,CAAC,EACD,aAAa,EAAE,GAAG,CAAC,KAAK,CAAC,mBAAgB,GAAG;;AAEhD,AAAA,yBAAyB,CAAC,EACxB,UAAU,EAAE,MAAM,EAClB,WAAW,ECPA,GAAG,GDOa"
+}

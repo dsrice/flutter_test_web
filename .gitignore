@@ -7,3 +7,13 @@ v1/migrations/__pycache__/
 v1/models/__pycache__/
 configs/__pycache__/
 __pycache__/manage.cpython-37.pyc
+bell_app/__pycache__/
+bell_app/views/__pycache__/
+bell_tail/__pycache__/
+bell_tail/views/__pycache__/
+bell_app/migrations/__pycache__/
+bell_app/forms/login/__pycache__/
+bell_app/forms/__pycache__/
+bell_app/forms/article/__pycache__/
+v1/sirializers/__pycache__/
+v1/views/__pycache__/

@@ -1,0 +1,56 @@
+{% load sass_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DEMO管理</title>
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="{% sass_src  'bell_app/common/header.sass' %}">
+
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper blue lighten-3 m-headerArea">
+      <a href="#" class="brand-logo">DEMOアプリ管理システム</a>
+    </div>
+  </nav>
+
+    <link rel="stylesheet" href="{% sass_src  'bell_app/login.sass' %}">
+
+<form action="" method="post">
+  {% csrf_token %}
+  <div class="row">
+    <div class="col l6 s12 offset-l3">
+        <div class="p-login_loginArea">
+          <div class="card">
+            <div class="card-content">
+                <div class="input-field">
+                  <input placeholder="ログインIDを入力してください" id="id_loginid" name="loginid" type="text" class="validate" value="{{form.data.loginid}}">
+                  <label for="loginid"><i class="material-icons left">accessibility</i>ログインID</label>
+                </div>
+                <div class="input-field">
+                  <input placeholder="パスワードを入力してください" id="id_password" name="password" type="text" class="validate">
+                  <label for="password"><i class="material-icons left">vpn_key</i>パスワード</label>
+                </div>
+
+                <div class="center-align">
+                    <button class="btn-large waves-effect waves-light p-login_loginArea-loginBtn" type="submit" name="action">
+                        <i class="material-icons left">input</i>
+                        ログイン
+                    </button>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>

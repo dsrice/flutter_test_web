@@ -6,3 +6,8 @@ djangorestframework-jwt
 django-log-request-id
 django-environ
 django-summernote
+django-materialize
+libsass
+django-compressor
+django-sass-processor
+mysqlclient

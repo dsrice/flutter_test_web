@@ -1,0 +1,21 @@
+.m-headerArea { padding-left: 8px; padding-right: 8px; }
+
+main { padding-left: 300px; }
+
+main .container { width: 100%; }
+
+.m-sideMenu_demoArea { font-size: 30px; text-align: center; text-shadow: 2px 2px 3px bisque; padding-top: 24px; padding-bottom: 24px; }
+
+.m-sideMenu_menuArea { font-size: 20px; }
+
+.m-sideMenu_menuArea a { text-decoration: none; color: black; }
+
+.m-sideMenu_menuArea a:hover { text-decoration: none; color: black; }
+
+.m-sideMenu_menuArea .material-icons { font-size: 20px; }
+
+.m-header_headerArea { margin-bottom: 16px; }
+
+.m-header_titleArea { font-size: 24px; padding-left: 8px; }
+
+/*# sourceMappingURL=header.css.map */
