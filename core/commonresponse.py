@@ -14,23 +14,22 @@ class Build_Response:
     @staticmethod
     def error_response(self, message, errors=None) -> Response:
         """
-		エラー時のレスポンス作成処理
-		"""
+        エラー時のレスポンス作成処理
+        """
         logger = logging.getLogger("error")
-        if errors != None:
+        if errors:
             logger.error(errors)
 
-        result = message
-
-        if local.__dict__.get("request_id") != None:
-            result["request_id"] = local.request_id
+        result = {"errors": [message]}
+        if local.__dict__.get("request_id"):
+            result["process_code"] = local.request_id
         else:
-            result["request_id"] = "test"
+            result["process_code"] = "test"
 
         result["server_time"] = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         logger.error(result)
 
-        return Response(result, result["status"])
+        return Response(result, message["status"])
 
     @staticmethod
     def success_response(self, data) -> Response:
