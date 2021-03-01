@@ -36,10 +36,21 @@ class ArticleDetailView(APIView):
         """
         base = {
             "title": article.title,
-            "body": article.body,
+            "body": self.convert_body(article.body),
             "article_id": article.id,
             "next_id": next_article[0].id if next_article else None,
             "prov_id": prov_article[0].id if prov_article else None,
         }
 
         return base
+
+    def convert_body(self, body):
+        """
+        画像へのリンクを修正する
+        :param body:
+        :return:
+        """
+        if "/media/django-summernote/" in body:
+            return body.replace("/media/django-summernote/", "http://10.0.2.2:8000/media/django-summernote/")
+        else:
+            return body
