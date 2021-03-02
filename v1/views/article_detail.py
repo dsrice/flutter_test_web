@@ -22,9 +22,8 @@ class ArticleDetailView(APIView):
             prov_article = Article.objects.filter(id__lt=target_id, is_deleted=False).order_by('-id')[:1]
             print(next_article)
 
-            response_data = {
-                "articles": self.create_result_json(article, next_article, prov_article)
-            }
+            response_data = self.create_result_json(article, next_article, prov_article)
+
             response = Build_Response.success_response(self, response_data)
         else:
             response = Build_Response.error_response(self, alerts["request"]["parameter_error"], )
