@@ -5,7 +5,11 @@
   padding-right: $base_space
 
 main
-  padding-left: 300px
+  @include sp
+    padding-left: 0px
+
+  @include tab
+    padding-left: 300px
 
   .container
     width: 100%
