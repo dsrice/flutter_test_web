@@ -10,3 +10,6 @@ class Article(TimeStampedModel):
     body = models.TextField()
     push_title = models.CharField(max_length=100, help_text="プッシュ通知のタイトル")
     push_body = models.CharField(max_length=300, help_text="プッシュ通知の本文")
+
+    class Meta:
+        db_table = "articles"

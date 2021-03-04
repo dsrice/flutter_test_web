@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load sass_tags %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h6>利用者情報</h6>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>ログインID</td>
+                            <td>{{ form.user.user.loginid }}</td>
+                        </tr>
+                        <tr>
+                            <td>スタンプ数</td>
+                            <td>
+                                {% if form.user.total %}
+                                    {{ form.user.total }}
+                                {% else %}
+                                    0
+                                {% endif %}
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col s12">
+                <div class="col s6">
+                    登録フォーム
+                    <form method="POST" action="detail">
+                        {% csrf_token %}
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        スタンプ数
+                                    </td>
+                                    <td>
+                                        {{ form.stamp_count }}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                            <i class="material-icons left">send</i>登録
+                        </button>
+                    </form>
+                </div>
+                <div class="col s6">
+                    スタンプ履歴
+                    {% if form.records %}
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>日付</th>
+                                    <th>スタンプ数</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for record in form.records %}
+                                    <tr class="p-articlePage_tbodyTr">
+                                        <td>{{ record.created_at }}</td>
+                                        <td>{{ record.stamp }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+
+                        </table>
+                         <ul class="pagination">
+                            {% if form.records.has_previous %}
+                                <li class="waves-effect">
+                                    <a href="?p={{form.records.previous_page_number  }}">
+                                        <i class="material-icons">chevron_left</i>
+                                    </a>
+                                </li>
+                            {% endif %}
+                            {% for page in form.page_obj.page_range %}
+                                {% if page >= form.records.number|add:-3 and page <= form.records.number|add:3 %}
+                                    {% if page %}
+                                        {% if page == form.records.number %}
+                                            <li class="active"><a href="?p={{ form.records.number }}">{{ form.records.number }}</a></li>
+                                        {% else %}
+                                            <li class="waves-effect"><a href="?p={{ page }}">{{ page }}</a></li>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                            {% if form.records.has_next %}
+                                <li class="waves-effect">
+                                    <a href="?p={{form.records.next_page_number  }}">
+                                        <i class="material-icons">chevron_right</i>
+                                    </a>
+                                </li>
+                            {% endif %}
+                         </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

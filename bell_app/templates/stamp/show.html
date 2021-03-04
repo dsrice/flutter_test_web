@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load sass_tags %}
+{% block content %}
+
+<div class="row">
+    {% if form.userlist %}
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>loginid</th>
+                    <th>スタンプ数</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in form.userlist %}
+                    <tr class="p-articlePage_tbodyTr">
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.user.loginid }}</td>
+                        <td>
+                            {% if user.total %}
+                                {{ user.total }}
+                            {% else %}
+                                0
+                            {% endif %}
+                        </td>
+                        <td>
+                            <a class="waves-effect waves-light btn-flat" href="{% url 'bell_app:stamp_detail' id=user.id %}">
+                                <i class="fas fa-clipboard"></i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+    {% endif %}
+
+</div>
+
+
+{% endblock %}

@@ -9,3 +9,19 @@ $base_space7: 56px
 $base_space8: 64px
 $base_space9: 72px
 $base_space10: 80px
+
+$pc: 1200px // PC
+$tab: 992px // タブレット
+$sp: 600px  // スマホ
+
+@mixin pc
+  @media (min-width: ($pc))
+    @content
+
+@mixin tab
+  @media (min-width: ($tab))
+    @content
+
+@mixin sp
+  @media (min-width: ($sp))
+    @content
