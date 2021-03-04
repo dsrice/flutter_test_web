@@ -12,3 +12,13 @@ class StampShowForm(CommonForm):
     userlist = None
 
 
+class StampDetailForm(CommonForm):
+    """
+    スタンプ管理画面用Form
+    """
+    stamp_total = None
+    user = None
+    records = None
+    page_obj =None
+
+    stamp_count = forms.IntegerField()

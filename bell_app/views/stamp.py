@@ -2,9 +2,10 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
-from bell_app.forms.stamp.stampForm import StampShowForm
+from bell_app.forms.stamp.stampForm import StampShowForm, StampDetailForm
+from v1.models import StampRecord, User
 from v1.models.stamp_total import StampTotal
-
+from django.core.paginator import Paginator
 
 @login_required
 def show(request):
@@ -28,7 +29,30 @@ def detail(request, id):
     :param request
     :return:
     """
-    form = StampShowForm()
+    num = 1
+    if request.POST:
+        form = StampDetailForm(request.POST)
+        if form.data["stamp_count"]:
+            stamp = StampRecord()
+            stamp.user = StampTotal.objects.get(id=id).user
+            stamp.stamp = form.data["stamp_count"]
+            print(id)
+            print(stamp)
+            stamp.save(request)
+            num = 1
 
+    elif request.GET:
+        print("GET")
+        num = request.GET.get('p')
+        if not num:
+            num = 1
+        print(num)
+
+    form = StampDetailForm()
+    form.user = StampTotal.objects.get(id=id)
+    records = StampRecord.objects.filter(user=form.user.user).order_by("-id")
+    paginator = Paginator(records, 10)
+    form.records = paginator.get_page(num)
+    form.page_obj = paginator
     context = {"title": "スタンプ履歴", "form": form}
     return render(request, "stamp/detail.html", context)
