@@ -9,4 +9,5 @@ urlpatterns = [
     path("article/create", article.create, name="article_create"),
     path("article/<int:article_id>/edit", article.edit, name="article_edit"),
     path("stamp/", stamp.show, name="stamp_show"),
+    path("stamp/<int:id>/detail", stamp.detail, name="stamp_detail"),
 ]

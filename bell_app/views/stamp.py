@@ -20,3 +20,15 @@ def show(request):
     context = {"title": "スタンプ管理", "form": form}
     return render(request, "stamp/show.html", context)
 
+
+@login_required
+def detail(request, id):
+    """
+    スタンプ利用履歴画面
+    :param request
+    :return:
+    """
+    form = StampShowForm()
+
+    context = {"title": "スタンプ履歴", "form": form}
+    return render(request, "stamp/detail.html", context)
