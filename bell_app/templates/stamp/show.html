@@ -3,7 +3,29 @@
 {% block content %}
 
 <div class="row">
-stampデモ
+    {% if form.userlist %}
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>loginid</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in form.userlist %}
+                    <tr class="p-articlePage_tbodyTr">
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.user.loginid }}</td>
+                        <td>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+    {% endif %}
+
 </div>
 
 

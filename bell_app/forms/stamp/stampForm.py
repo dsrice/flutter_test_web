@@ -7,8 +7,8 @@ from django_summernote.widgets import SummernoteWidget
 
 class StampShowForm(CommonForm):
     """
-    記事一覧画面用Form
+    スタンプ管理画面用Form
     """
-    test = "test"
+    userlist = None
 
 
