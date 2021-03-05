@@ -24,6 +24,12 @@ ALLOWED_HOSTS = ["10.0.2.2", "localhost"]
 
 AUTH_USER_MODEL = 'v1.User'
 
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticated',),
+    'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework_jwt.authentication.JSONWebTokenAuthentication',),
+}
+
 # Application definition
 
 INSTALLED_APPS = [
