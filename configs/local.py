@@ -11,7 +11,7 @@ SECRET_KEY = env("SECRET_KEY")
 
 # JWT
 JWT_AUTH = {
-    "JWT_EXPIRATION_DELTA": datetime.timedelta(minutes=5),
+    "JWT_EXPIRATION_DELTA": datetime.timedelta(hours=8),
     "JWT_AUTH_COOKIE": "token",
     "JWT_SECRET_KEY": env("JWT_KEY")
 }
