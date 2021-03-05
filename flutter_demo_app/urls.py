@@ -23,9 +23,6 @@ urlpatterns = [
     url("v1/", include("v1.urls")),
     url("bell_app/", include("bell_app.urls")),
     path('summernote/', include('django_summernote.urls')),
-    path("auth/token", obtain_jwt_token),
-    path("auth/token/verify", verify_jwt_token),
-    path('auth/token/refresh', refresh_jwt_token),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
