@@ -6,6 +6,7 @@ from rest_framework_jwt.views import obtain_jwt_token, verify_jwt_token, refresh
 from v1.views.article import ArticleView
 from v1.views.article_detail import ArticleDetailView
 from v1.views.stamp import StampView
+from v1.views.token import TokenView
 
 router = routers.SimpleRouter()
 urlpatterns = [
@@ -15,6 +16,7 @@ urlpatterns = [
     path('article', ArticleView.as_view()),
     path('article_detail', ArticleDetailView.as_view()),
     path('stamp', StampView.as_view()),
+    path('token', TokenView.as_view()),
 ]
 
 urlpatterns += router.urls

@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 from bell_app.forms.article.articleForm import ArticleIndexForm, ArticleNewForm, ArticleEditForm
+from core.firebase import Firebase
 from v1.models import Article
 
 
@@ -46,6 +47,9 @@ def create(request):
         article.body = form.cleaned_data["article_body"]
 
         article.save(request)
+
+        firebase = Firebase()
+        firebase.send_multicast("お知らせ", "新しい記事が投稿されました。")
 
         return redirect("bell_app:article_index")
 
