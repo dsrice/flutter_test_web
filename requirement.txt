@@ -11,3 +11,4 @@ libsass
 django-compressor
 django-sass-processor
 mysqlclient
+firebase-admin
