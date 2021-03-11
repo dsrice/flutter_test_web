@@ -15,6 +15,7 @@ def index(request):
     :return:
     """
     form = ArticleIndexForm()
+    form.articles = Article.objects.all().filter(is_deleted=False).order_by("-id")
 
     context = {"title": "記事一覧", "form": form}
     return render(request, "article/index.html", context)

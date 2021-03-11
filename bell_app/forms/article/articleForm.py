@@ -10,7 +10,7 @@ class ArticleIndexForm(CommonForm):
     記事一覧画面用Form
     """
     article_title = forms.CharField()
-    articles = Article.objects.all().order_by("-id")
+    articles = Article.objects.all().filter(is_deleted=False).order_by("-id")
 
 
 class ArticleNewForm(forms.Form):

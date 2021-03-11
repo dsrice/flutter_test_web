@@ -13,7 +13,7 @@ class ArticleView(APIView):
     def get(self, request):
         params = request.GET
         print(params)
-        articles = Article.objects.all().order_by("-id")
+        articles = Article.objects.all().filter(is_deleted=False).order_by("-id")
 
         response_data = {
             "articles": self.create_result_json(articles)

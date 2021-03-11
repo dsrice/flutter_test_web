@@ -18,3 +18,5 @@ bell_app/forms/article/__pycache__/
 v1/sirializers/__pycache__/
 v1/views/__pycache__/
 bell_app/forms/stamp/__pycache__/
+configs/fapp-demo-firebase-adminsdk-f4bjz-45c2d9e3d4.json
+media/django-summernote/

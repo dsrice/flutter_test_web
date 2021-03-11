@@ -136,5 +136,17 @@ X_FRAME_OPTIONS = "SAMEORIGIN"
 SUMMERNOTE_CONFIG = {
     'summernote': {
         'width': '100%',
+        'lang': 'ja-JP',
+        "toolbar": [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['fontname', ['fontname']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']],
+        ],
+        'attachment_absolute_uri': True,
     },
 }
